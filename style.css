@@ -24,6 +24,10 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: fadeInUp 1s ease-in-out;
+    /* Center content vertically and horizontally if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
 }
 
 .profile-photo {
@@ -35,10 +39,15 @@ h2 {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .profile-photo:hover {
     transform: scale(1.05);
+}
+
+.profile-description {
+    max-width: 600px; /* Optional: constrain text width */
 }
 
 .profile-description h2 {
@@ -71,8 +80,18 @@ h2 {
     color: #333;
 }
 
-.task-item {
-    background-color: #f9f9f9;
+/* Background beda warna tiap tugas ganjil dan genap */
+.task-item:nth-child(odd) {
+    background-color: #f9f9f9; /* warna cerah */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.task-item:nth-child(even) {
+    background-color: #e0f7fa; /* warna biru muda */
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 10px;
