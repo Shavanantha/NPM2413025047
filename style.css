@@ -1,4 +1,5 @@
-/* styles.css */
+/* style.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #B88B4A, #D9C4A6);
@@ -7,37 +8,39 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #4B3B1F;
 }
 
-.card {
+.card, .profile-container, .task-list-container {
     background: #FAF3E0;
-    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+.card:hover, .profile-container:hover, .task-list-container:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .profile-container {
     display: flex;
+    align-items: center;
     gap: 20px;
-    align-items: flex-start;
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.profile-description {
-    max-width: 600px;
+.profile-description p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
 }
 
 a {
@@ -50,19 +53,32 @@ a:hover {
     color: #623A2C;
 }
 
-h1, h2 {
+h1, h2, h3 {
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-li {
+li.task-item {
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9C4A6;
 }
 
-.task-item h3 {
-    margin-bottom: 5px;
+/* Responsive */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
 }
