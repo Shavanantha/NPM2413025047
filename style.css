@@ -1,33 +1,34 @@
-/* ==== GLOBAL STYLING ==== */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    background: linear-gradient(135deg, #B88B4A, #D9C4A6);
     margin: 0;
     padding: 20px;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* ==== HEADING ==== */
-h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
+.card {
+    background: #FAF3E0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* ==== PROFILE SECTION ==== */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
 .profile-container {
     background-color: #fff;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto 20px auto;
     padding: 30px 20px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeInUp 1s ease-in-out;
-    /* Center content vertically and horizontally if needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
+    text-align: center;  /* Biar foto dan teks center */
 }
 
 .profile-photo {
@@ -39,15 +40,11 @@ h2 {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: transform 0.3s ease;
-    display: block;
+    display: inline-block;  /* supaya ikut text-align center */
 }
 
 .profile-photo:hover {
     transform: scale(1.05);
-}
-
-.profile-description {
-    max-width: 600px; /* Optional: constrain text width */
 }
 
 .profile-description h2 {
@@ -63,11 +60,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* ==== TASK LIST SECTION ==== */
 .task-list-container {
     background-color: #fff;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto 40px auto;
     padding: 25px 20px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -80,9 +76,7 @@ h2 {
     color: #333;
 }
 
-/* Background beda warna tiap tugas ganjil dan genap */
-.task-item:nth-child(odd) {
-    background-color: #f9f9f9; /* warna cerah */
+.task-item {
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -90,17 +84,18 @@ h2 {
     transition: transform 0.2s ease;
 }
 
+/* Biar tiap tugas beda background */
+.task-item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
 .task-item:nth-child(even) {
-    background-color: #e0f7fa; /* warna biru muda */
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    background-color: #eaeaea;
 }
 
 .task-item:hover {
     transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .task-item h3 {
@@ -115,37 +110,17 @@ h2 {
     margin-bottom: 10px;
 }
 
-.download-link,
-.youtube-link {
-    display: inline-block;
-    padding: 8px 14px;
-    margin-right: 10px;
-    background-color: #00796B;
-    color: #fff;
+a {
+    color: #8B5E3C;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    transition: color 0.2s;
+    margin-right: 10px;
 }
 
-.download-link:hover,
-.youtube-link:hover {
-    background-color: #004D40;
+a:hover {
+    color: #623A2C;
 }
 
-/* ==== ANIMATION ==== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ==== RESPONSIVE ==== */
 @media (max-width: 600px) {
     .task-list-container,
     .profile-container {
