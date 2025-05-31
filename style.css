@@ -1,139 +1,125 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #B88B4A, #D9C4A6);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #B88B4A, #D9C4A6);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.card {
-    background: #FAF3E0;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-}
-
+/* Profile Container */
 .profile-container {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    padding: 30px 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;  /* Biar foto dan teks center */
+  background-color: #fff9e6; /* cream lembut */
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .profile-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    display: inline-block;  /* supaya ikut text-align center */
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .profile-description h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: #222;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #3e2f1c;
 }
 
 .profile-description p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #5c4b34;
+  margin-bottom: 10px;
 }
 
+/* Task List Container */
 .task-list-container {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    padding: 25px 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fdf6e3; /* cream */
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .task-list-container h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5c4b34;
 }
 
+/* Task Items */
 .task-item {
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-}
-
-/* Biar tiap tugas beda background */
-.task-item:nth-child(odd) {
-    background-color: #f9f9f9;
+  background-color: #fff9e6; /* cream lebih terang */
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .task-item:nth-child(even) {
-    background-color: #eaeaea;
+  background-color: #f5eedc; /* cream sedikit lebih gelap */
 }
 
 .task-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .task-item h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: #222;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #3e2f1c;
 }
 
 .task-item p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #7a6a4f;
+  margin-bottom: 10px;
 }
 
 a {
-    color: #8B5E3C;
-    text-decoration: none;
-    transition: color 0.2s;
-    margin-right: 10px;
+  color: #8B5E3C;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-right: 10px;
 }
 
 a:hover {
-    color: #623A2C;
+  color: #623A2C;
 }
 
 @media (max-width: 600px) {
-    .task-list-container,
-    .profile-container {
-        padding: 15px;
-        margin: 15px 10px;
-    }
+  .task-list-container,
+  .profile-container {
+    padding: 15px;
+    margin: 15px 10px;
+  }
 
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
 
-    .task-item h3 {
-        font-size: 18px;
-    }
+  .task-item h3 {
+    font-size: 18px;
+  }
 }
